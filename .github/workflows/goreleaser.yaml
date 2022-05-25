@@ -19,6 +19,9 @@ jobs:
         name: Set up Go
         uses: actions/setup-go@v3
       -
+        name: Install libolm
+        run: sudo apt-get install -y libolm-dev
+      -
         name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v3
         with:
